@@ -55,7 +55,14 @@ async function apiClient({ method = 'GET', path, body, params } = {}) {
     // ignore parse failure
   }
 
+  const isLoginRequest = method === 'POST' && path === '/auth/login';
+
   if (response.status === 401) {
+    if (isLoginRequest) {
+      // Wrong credentials — surface the server message, no logout side-effects
+      throw new ApiError(401, message || 'Invalid email or password.');
+    }
+    // Session expiry — existing logout flow (unchanged)
     if (!isLoggingOut) {
       isLoggingOut = true;
       localStorage.removeItem('token');

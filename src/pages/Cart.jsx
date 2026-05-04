@@ -138,6 +138,13 @@ export default function Cart() {
               >
                 Clear Cart
               </button>
+              <Link
+                to="/products"
+                aria-label="Continue shopping"
+                className="mt-3 block w-full rounded-full border border-indigo-200 py-2.5 text-center text-sm font-semibold text-indigo-600 hover:bg-indigo-50 transition-colors"
+              >
+                Continue Shopping
+              </Link>
             </div>
           </div>
         )}
