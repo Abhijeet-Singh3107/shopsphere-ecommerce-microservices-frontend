@@ -32,7 +32,7 @@ export default function Products() {
         setProducts(Array.isArray(data) ? data : (data?.content ?? []));
         setTotalPages(1);
       } else {
-        data = await getProducts(currentPage, 10);
+        data = await getProducts(currentPage, 15);
         setProducts(data?.content ?? data ?? []);
         setTotalPages(data?.totalPages ?? 1);
       }
