@@ -43,7 +43,7 @@ export default function ProductDetail() {
   if (!product) return (
     <div className="mx-auto max-w-2xl px-4 py-20 text-center">
       <p className="text-gray-500">Product not found.</p>
-      <Link to="/products" className="mt-4 inline-block text-sm text-indigo-600 hover:underline">Back to products</Link>
+      <Link to="/products" className="mt-4 inline-block text-sm text-sky-600 hover:underline">Back to products</Link>
     </div>
   );
 
@@ -55,9 +55,9 @@ export default function ProductDetail() {
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-3 text-sm text-gray-500">
-          <Link to="/" className="hover:text-indigo-600">Home</Link>
+          <Link to="/" className="hover:text-sky-600">Home</Link>
           <span className="mx-2">/</span>
-          <Link to="/products" className="hover:text-indigo-600">Products</Link>
+          <Link to="/products" className="hover:text-sky-600">Products</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-800 font-medium">{product.name}</span>
         </div>
@@ -89,7 +89,7 @@ export default function ProductDetail() {
             {/* Details */}
             <div className="flex flex-1 flex-col p-8 md:p-10">
               {product.categoryName && (
-                <span className="mb-2 text-xs font-bold uppercase tracking-widest text-indigo-500">
+                <span className="mb-2 text-xs font-bold uppercase tracking-widest text-sky-500">
                   {product.categoryName}
                 </span>
               )}
@@ -116,14 +116,14 @@ export default function ProductDetail() {
                   <button
                     onClick={handleAddToCart}
                     disabled={addingToCart || !inStock}
-                    className="w-full rounded-full bg-indigo-600 py-3.5 font-semibold text-white shadow-md transition-all hover:bg-indigo-700 hover:shadow-lg disabled:opacity-50"
+                    className="w-full rounded-full bg-sky-600 py-3.5 font-semibold text-white shadow-md transition-all hover:bg-sky-700 hover:shadow-lg disabled:opacity-50"
                   >
                     {addingToCart ? 'Adding…' : 'Add to Cart'}
                   </button>
                 ) : (
                   <Link
                     to="/login"
-                    className="block w-full rounded-full bg-indigo-600 py-3.5 text-center font-semibold text-white shadow-md transition-all hover:bg-indigo-700"
+                    className="block w-full rounded-full bg-sky-600 py-3.5 text-center font-semibold text-white shadow-md transition-all hover:bg-sky-700"
                   >
                     Sign in to Add to Cart
                   </Link>

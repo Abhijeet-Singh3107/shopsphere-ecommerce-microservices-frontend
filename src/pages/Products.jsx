@@ -87,7 +87,7 @@ export default function Products() {
                 <li>
                   <button
                     onClick={() => handleCategoryChange('')}
-                    className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${selectedCategory === '' ? 'bg-indigo-50 font-semibold text-indigo-700' : 'text-gray-600 hover:bg-gray-100'}`}
+                    className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${selectedCategory === '' ? 'bg-sky-50 font-semibold text-sky-700' : 'text-gray-600 hover:bg-gray-100'}`}
                   >
                     All Categories
                   </button>
@@ -96,7 +96,7 @@ export default function Products() {
                   <li key={cat.id}>
                     <button
                       onClick={() => handleCategoryChange(cat.id)}
-                      className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${selectedCategory === cat.id ? 'bg-indigo-50 font-semibold text-indigo-700' : 'text-gray-600 hover:bg-gray-100'}`}
+                      className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${selectedCategory === cat.id ? 'bg-sky-50 font-semibold text-sky-700' : 'text-gray-600 hover:bg-gray-100'}`}
                     >
                       {cat.name}
                     </button>
@@ -112,14 +112,14 @@ export default function Products() {
                 <input
                   type="number" min="0" value={priceMin} onChange={(e) => setPriceMin(e.target.value)}
                   placeholder="Min ₹"
-                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-400 focus:outline-none focus:ring-1 focus:ring-indigo-300"
+                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-300"
                 />
                 <input
                   type="number" min="0" value={priceMax} onChange={(e) => setPriceMax(e.target.value)}
                   placeholder="Max ₹"
-                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-400 focus:outline-none focus:ring-1 focus:ring-indigo-300"
+                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-300"
                 />
-                <button type="submit" className="w-full rounded-lg bg-indigo-600 py-2 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors">
+                <button type="submit" className="w-full rounded-lg bg-sky-600 py-2 text-sm font-semibold text-white hover:bg-sky-700 transition-colors">
                   Apply
                 </button>
               </form>

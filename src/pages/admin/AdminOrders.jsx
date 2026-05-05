@@ -70,7 +70,7 @@ export default function AdminOrders() {
         <select
           value={statusFilter}
           onChange={handleFilterChange}
-          className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
+          className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-sky-500 focus:outline-none"
         >
           <option value="">All</option>
           {ORDER_STATUSES.map((s) => (
@@ -99,7 +99,7 @@ export default function AdminOrders() {
                   <tr
                     key={order.id}
                     onClick={() => handleRowClick(order)}
-                    className={`cursor-pointer bg-white hover:bg-blue-50 ${selectedOrder?.id === order.id ? 'bg-blue-50' : ''}`}
+                    className={`cursor-pointer bg-white hover:bg-sky-50 ${selectedOrder?.id === order.id ? 'bg-sky-50' : ''}`}
                   >
                     <td className="px-4 py-3 font-mono text-xs text-gray-600">{order.id}</td>
                     <td className="px-4 py-3">
@@ -170,7 +170,7 @@ function OrderDetail({ order, onStatusUpdate, onClose }) {
           value={order.status}
           onChange={handleUpdate}
           disabled={updating}
-          className="w-full rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none disabled:opacity-50"
+          className="w-full rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-sky-500 focus:outline-none disabled:opacity-50"
         >
           {ORDER_STATUSES.map((s) => (
             <option key={s} value={s}>{s}</option>

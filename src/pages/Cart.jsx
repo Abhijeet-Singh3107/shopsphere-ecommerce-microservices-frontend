@@ -87,7 +87,7 @@ export default function Cart() {
           <div className="rounded-2xl border border-dashed border-gray-300 py-20 text-center">
             <p className="mb-2 text-lg font-semibold text-gray-700">Your cart is empty</p>
             <p className="mb-6 text-sm text-gray-500">Add some products to get started.</p>
-            <Link to="/products" className="inline-block rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors">
+            <Link to="/products" className="inline-block rounded-full bg-sky-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-sky-700 transition-colors">
               Browse Products
             </Link>
           </div>
@@ -122,13 +122,13 @@ export default function Cart() {
               </div>
               <div className="mb-6 flex justify-between text-sm text-gray-600">
                 <span>Shipping</span>
-                <span className="text-green-600 font-medium">Free</span>
+              <span className="text-green-600 font-medium">Free</span>
               </div>
               <div className="mb-6 border-t border-gray-100 pt-4 flex justify-between font-bold text-gray-900">
                 <span>Total</span>
-                <span className="text-indigo-600">{formattedTotal}</span>
+                <span className="text-lg font-bold text-sky-600">{formattedTotal}</span>
               </div>
-              <Link to="/checkout" className="block w-full rounded-full bg-indigo-600 py-3 text-center text-sm font-semibold text-white hover:bg-indigo-700 transition-colors">
+              <Link to="/checkout" className="block w-full rounded-full bg-sky-600 py-3 text-center text-sm font-semibold text-white hover:bg-sky-700 transition-colors">
                 Proceed to Checkout
               </Link>
               <button
@@ -141,7 +141,7 @@ export default function Cart() {
               <Link
                 to="/products"
                 aria-label="Continue shopping"
-                className="mt-3 block w-full rounded-full border border-indigo-200 py-2.5 text-center text-sm font-semibold text-indigo-600 hover:bg-indigo-50 transition-colors"
+                className="mt-3 block w-full rounded-full border border-sky-200 py-2.5 text-center text-sm font-semibold text-sky-600 hover:bg-sky-50 transition-colors"
               >
                 Continue Shopping
               </Link>

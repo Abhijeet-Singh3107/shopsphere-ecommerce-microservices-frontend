@@ -55,21 +55,21 @@ describe('Progress indicator', () => {
   });
 
   describe('when step is "shipping" (initial render) — Requirement 1.2', () => {
-    it('shows Cart as completed: filled indigo circle', () => {
+    it('shows Cart as completed: filled sky circle', () => {
       renderCheckout();
       const cartLabel = screen.getByText('Cart');
-      expect(cartLabel).toHaveClass('text-indigo-600');
+      expect(cartLabel).toHaveClass('text-sky-600');
       const cartCircle = cartLabel.previousElementSibling;
-      expect(cartCircle).toHaveClass('bg-indigo-600');
+      expect(cartCircle).toHaveClass('bg-sky-600');
     });
 
-    it('shows Shipping as active: filled indigo circle with semibold label', () => {
+    it('shows Shipping as active: filled sky circle with semibold label', () => {
       renderCheckout();
       const shippingLabel = screen.getByText('Shipping');
-      expect(shippingLabel).toHaveClass('text-indigo-600');
+      expect(shippingLabel).toHaveClass('text-sky-600');
       expect(shippingLabel).toHaveClass('font-semibold');
       const shippingCircle = shippingLabel.previousElementSibling;
-      expect(shippingCircle).toHaveClass('bg-indigo-600');
+      expect(shippingCircle).toHaveClass('bg-sky-600');
     });
 
     it('shows Payment as upcoming: bordered gray circle with gray label', () => {
@@ -90,11 +90,11 @@ describe('Progress indicator', () => {
       expect(doneCircle).toHaveClass('bg-white');
     });
 
-    it('connector Cart→Shipping uses border-indigo-300 (Shipping is active)', () => {
+    it('connector Cart→Shipping uses border-sky-300 (Shipping is active)', () => {
       const { container } = renderCheckout();
       const nav = container.querySelector('nav[aria-label="Checkout progress"]');
       const connectors = nav.querySelectorAll('li[aria-hidden="true"]');
-      expect(connectors[0]).toHaveClass('border-indigo-300');
+      expect(connectors[0]).toHaveClass('border-sky-300');
     });
 
     it('connector Shipping→Payment uses border-gray-200 (Payment is upcoming)', () => {

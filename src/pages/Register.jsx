@@ -32,17 +32,17 @@ export default function Register() {
   return (
     <div className="flex min-h-[calc(100vh-4rem)]">
       {/* Left panel */}
-      <div className="hidden flex-1 flex-col items-center justify-center bg-gradient-to-br from-violet-600 to-indigo-700 p-12 text-white lg:flex">
+      <div className="hidden flex-1 flex-col items-center justify-center bg-gradient-to-br from-cyan-500 to-sky-700 p-12 text-white lg:flex">
         <div className="max-w-sm text-center">
           <div className="mb-6 flex h-16 w-16 mx-auto items-center justify-center rounded-2xl bg-white/20 text-3xl backdrop-blur-sm">
             ✨
           </div>
           <h2 className="mb-3 text-3xl font-bold">Join ShopSphere</h2>
-          <p className="text-indigo-200">Create your free account and start shopping thousands of products today.</p>
-          <ul className="mt-6 space-y-2 text-left text-sm text-indigo-100">
+          <p className="text-sky-200">Create your free account and start shopping thousands of products today.</p>
+          <ul className="mt-6 space-y-2 text-left text-sm text-sky-100">
             {['Free to join', 'Track your orders', 'Exclusive deals', 'Fast checkout'].map((item) => (
               <li key={item} className="flex items-center gap-2">
-                <span className="text-indigo-300">✓</span> {item}
+                <span className="text-sky-300">✓</span> {item}
               </li>
             ))}
           </ul>
@@ -56,7 +56,7 @@ export default function Register() {
             <h1 className="text-2xl font-bold text-gray-900">Create account</h1>
             <p className="mt-1 text-sm text-gray-500">
               Already have one?{' '}
-              <Link to="/login" className="font-semibold text-indigo-600 hover:text-indigo-800">Sign in</Link>
+              <Link to="/login" className="font-semibold text-sky-600 hover:text-sky-800">Sign in</Link>
             </p>
           </div>
 
@@ -67,7 +67,7 @@ export default function Register() {
                 id="name" type="text" required autoComplete="name"
                 value={name} onChange={(e) => setName(e.target.value)}
                 placeholder="Abhijeet Singh"
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200"
               />
             </div>
             <div>
@@ -76,7 +76,7 @@ export default function Register() {
                 id="email" type="email" required autoComplete="email"
                 value={email} onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200"
               />
             </div>
             <div>
@@ -87,7 +87,7 @@ export default function Register() {
                   value={password} onChange={(e) => setPassword(e.target.value)}
                   minLength={8}
                   placeholder="••••••••"
-                  className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 pr-11 text-sm shadow-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 pr-11 text-sm shadow-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200"
                 />
                 <button type="button" onClick={() => setShowPw((v) => !v)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
                   {showPw ? (
@@ -108,7 +108,7 @@ export default function Register() {
             </div>
             <button
               type="submit" disabled={loading}
-              className="w-full rounded-xl bg-indigo-600 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-indigo-700 hover:shadow-lg disabled:opacity-60"
+              className="w-full rounded-xl bg-sky-600 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-sky-700 hover:shadow-lg disabled:opacity-60"
             >
               {loading ? 'Creating account…' : 'Create account'}
             </button>

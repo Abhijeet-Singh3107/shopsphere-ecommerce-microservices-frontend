@@ -222,32 +222,32 @@ export default function Checkout() {
               <ol className="flex items-center">
                 {/* Step 1: Cart — always completed */}
                 <li className="flex items-center">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-600">
                     {checkmark}
                   </span>
-                  <span className="ml-2 text-sm text-indigo-600">Cart</span>
+                  <span className="ml-2 text-sm text-sky-600">Cart</span>
                 </li>
 
-                {/* Connector: Cart → Shipping (always indigo since Shipping is always active or completed) */}
-                <li className="flex-1 border-t-2 border-indigo-300 mx-3" aria-hidden="true" />
+                {/* Connector: Cart → Shipping (always sky since Shipping is always active or completed) */}
+                <li className="flex-1 border-t-2 border-sky-300 mx-3" aria-hidden="true" />
 
                 {/* Step 2: Shipping — active or completed */}
                 <li className="flex items-center">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-600">
                     {shippingCompleted ? checkmark : <span className="text-sm font-semibold text-white">2</span>}
                   </span>
-                  <span className={`ml-2 text-sm ${shippingActive ? 'font-semibold text-indigo-600' : 'text-indigo-600'}`}>
+                  <span className={`ml-2 text-sm ${shippingActive ? 'font-semibold text-sky-600' : 'text-sky-600'}`}>
                     Shipping
                   </span>
                 </li>
 
-                {/* Connector: Shipping → Payment (indigo when Payment is active or completed, gray when upcoming) */}
-                <li className={`flex-1 border-t-2 ${paymentActive ? 'border-indigo-300' : 'border-gray-200'} mx-3`} aria-hidden="true" />
+                {/* Connector: Shipping → Payment (sky when Payment is active or completed, gray when upcoming) */}
+                <li className={`flex-1 border-t-2 ${paymentActive ? 'border-sky-300' : 'border-gray-200'} mx-3`} aria-hidden="true" />
 
                 {/* Step 3: Payment — active or upcoming */}
                 <li className="flex items-center">
                   {paymentActive ? (
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-600">
                       <span className="text-sm font-semibold text-white">3</span>
                     </span>
                   ) : (
@@ -255,7 +255,7 @@ export default function Checkout() {
                       <span className="text-sm text-gray-400">3</span>
                     </span>
                   )}
-                  <span className={`ml-2 text-sm ${paymentActive ? 'font-semibold text-indigo-600' : 'text-gray-400'}`}>
+                  <span className={`ml-2 text-sm ${paymentActive ? 'font-semibold text-sky-600' : 'text-gray-400'}`}>
                     Payment
                   </span>
                 </li>
@@ -337,7 +337,7 @@ export default function Checkout() {
                           onBlur={() => handleBlur(key)}
                           disabled={loading}
                           aria-describedby={hasError ? `${id}-error` : undefined}
-                          className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 disabled:opacity-50"
+                          className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200 disabled:opacity-50"
                         />
                         {hasError && (
                           <p id={`${id}-error`} className="text-red-500 text-xs mt-1">
@@ -352,7 +352,7 @@ export default function Checkout() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full rounded-full bg-indigo-600 py-3.5 font-semibold text-white shadow-md transition-all hover:bg-indigo-700 hover:shadow-lg disabled:opacity-60"
+                  className="w-full rounded-full bg-sky-600 py-3.5 font-semibold text-white shadow-md transition-all hover:bg-sky-700 hover:shadow-lg disabled:opacity-60"
                 >
                   {loading ? 'Placing order…' : 'Continue to Payment'}
                 </button>
@@ -389,7 +389,7 @@ export default function Checkout() {
                           checked={paymentMethod === value}
                           onChange={() => handleMethodChange(value)}
                           disabled={loading}
-                          className="accent-indigo-600"
+                          className="accent-sky-600"
                         />
                         {label}
                       </label>
@@ -412,7 +412,7 @@ export default function Checkout() {
                         onBlur={() => handlePaymentBlur('cardNumber')}
                         disabled={loading}
                         aria-describedby={paymentErrors.cardNumber && paymentTouched.cardNumber ? 'cardNumber-error' : undefined}
-                        className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 disabled:opacity-50"
+                        className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200 disabled:opacity-50"
                         placeholder="1234 5678 9012 3456"
                       />
                       {paymentErrors.cardNumber && paymentTouched.cardNumber && (
@@ -432,7 +432,7 @@ export default function Checkout() {
                         onBlur={() => handlePaymentBlur('cardholderName')}
                         disabled={loading}
                         aria-describedby={paymentErrors.cardholderName && paymentTouched.cardholderName ? 'cardholderName-error' : undefined}
-                        className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 disabled:opacity-50"
+                        className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200 disabled:opacity-50"
                         placeholder="Name as it appears on card"
                       />
                       {paymentErrors.cardholderName && paymentTouched.cardholderName && (
@@ -454,7 +454,7 @@ export default function Checkout() {
                           onBlur={() => handlePaymentBlur('expiry')}
                           disabled={loading}
                           aria-describedby={paymentErrors.expiry && paymentTouched.expiry ? 'expiry-error' : undefined}
-                          className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 disabled:opacity-50"
+                          className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200 disabled:opacity-50"
                           placeholder="MM/YY"
                         />
                         {paymentErrors.expiry && paymentTouched.expiry && (
@@ -474,7 +474,7 @@ export default function Checkout() {
                           onBlur={() => handlePaymentBlur('cvv')}
                           disabled={loading}
                           aria-describedby={paymentErrors.cvv && paymentTouched.cvv ? 'cvv-error' : undefined}
-                          className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 disabled:opacity-50"
+                          className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200 disabled:opacity-50"
                           placeholder="123"
                         />
                         {paymentErrors.cvv && paymentTouched.cvv && (
@@ -499,7 +499,7 @@ export default function Checkout() {
                       disabled={loading}
                       placeholder="user@upi"
                       aria-describedby={upiErrors.upiId && upiTouched.upiId ? 'upiId-error' : undefined}
-                      className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 disabled:opacity-50"
+                      className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200 disabled:opacity-50"
                     />
                     {upiErrors.upiId && upiTouched.upiId && (
                       <p id="upiId-error" className="text-red-500 text-xs mt-1">{upiErrors.upiId}</p>
@@ -529,7 +529,7 @@ export default function Checkout() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="flex-1 rounded-full bg-indigo-600 py-3.5 font-semibold text-white shadow-md transition-all hover:bg-indigo-700 hover:shadow-lg disabled:opacity-60"
+                    className="flex-1 rounded-full bg-sky-600 py-3.5 font-semibold text-white shadow-md transition-all hover:bg-sky-700 hover:shadow-lg disabled:opacity-60"
                   >
                     {loading ? 'Placing order…' : 'Place Order'}
                   </button>

@@ -68,7 +68,7 @@ export default function AdminProducts() {
         <h1 className="text-2xl font-bold text-gray-900">Products</h1>
         <button
           onClick={() => setModal({ mode: 'create' })}
-          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+          className="rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-700"
         >
           + Create
         </button>
@@ -101,7 +101,7 @@ export default function AdminProducts() {
                     <td className="px-4 py-3 text-right">
                       <button
                         onClick={() => setModal({ mode: 'edit', product: p })}
-                        className="mr-3 text-sm font-medium text-blue-600 hover:text-blue-800"
+                        className="mr-3 text-sm font-medium text-sky-600 hover:text-sky-800"
                       >
                         Edit
                       </button>

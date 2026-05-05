@@ -31,13 +31,13 @@ export default function Login() {
   return (
     <div className="flex min-h-[calc(100vh-4rem)]">
       {/* Left panel */}
-      <div className="hidden flex-1 flex-col items-center justify-center bg-gradient-to-br from-indigo-700 to-violet-600 p-12 text-white lg:flex">
+      <div className="hidden flex-1 flex-col items-center justify-center bg-gradient-to-br from-sky-700 to-cyan-500 p-12 text-white lg:flex">
         <div className="max-w-sm text-center">
           <div className="mb-6 flex h-16 w-16 mx-auto items-center justify-center rounded-2xl bg-white/20 text-3xl backdrop-blur-sm">
             🛍️
           </div>
           <h2 className="mb-3 text-3xl font-bold">Welcome back</h2>
-          <p className="text-indigo-200">Sign in to access your orders, cart, and personalised recommendations.</p>
+          <p className="text-sky-200">Sign in to access your orders, cart, and personalised recommendations.</p>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ export default function Login() {
             <h1 className="text-2xl font-bold text-gray-900">Sign in</h1>
             <p className="mt-1 text-sm text-gray-500">
               New here?{' '}
-              <Link to="/register" className="font-semibold text-indigo-600 hover:text-indigo-800">Create an account</Link>
+              <Link to="/register" className="font-semibold text-sky-600 hover:text-sky-800">Create an account</Link>
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Login() {
                 id="email" type="email" required autoComplete="email"
                 value={email} onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200"
               />
             </div>
             <div>
@@ -69,7 +69,7 @@ export default function Login() {
                   id="password" type={showPw ? 'text' : 'password'} required autoComplete="current-password"
                   value={password} onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 pr-11 text-sm shadow-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 pr-11 text-sm shadow-sm focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200"
                 />
                 <button type="button" onClick={() => setShowPw((v) => !v)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
                   {showPw ? (
@@ -87,7 +87,7 @@ export default function Login() {
             </div>
             <button
               type="submit" disabled={loading}
-              className="w-full rounded-xl bg-indigo-600 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-indigo-700 hover:shadow-lg disabled:opacity-60"
+              className="w-full rounded-xl bg-sky-600 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-sky-700 hover:shadow-lg disabled:opacity-60"
             >
               {loading ? 'Signing in…' : 'Sign in'}
             </button>

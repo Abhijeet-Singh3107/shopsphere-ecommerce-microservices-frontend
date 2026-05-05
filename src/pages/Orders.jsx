@@ -42,7 +42,7 @@ export default function Orders() {
           <div className="rounded-2xl border border-dashed border-gray-300 py-20 text-center">
             <p className="mb-2 text-lg font-semibold text-gray-700">No orders yet</p>
             <p className="mb-6 text-sm text-gray-500">Start shopping to see your orders here.</p>
-            <Link to="/products" className="inline-block rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors">
+            <Link to="/products" className="inline-block rounded-full bg-sky-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-sky-700 transition-colors">
               Browse Products
             </Link>
           </div>
@@ -73,7 +73,7 @@ export default function Orders() {
                       <td className="px-5 py-4 text-right font-semibold text-gray-900">{formattedTotal}</td>
                       <td className="px-5 py-4 text-gray-500">{formattedDate}</td>
                       <td className="px-5 py-4 text-right">
-                        <Link to={`/orders/${order.id}`} className="text-sm font-semibold text-indigo-600 hover:text-indigo-800">
+                        <Link to={`/orders/${order.id}`} className="text-sm font-semibold text-sky-600 hover:text-sky-800">
                           View →
                         </Link>
                       </td>

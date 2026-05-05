@@ -62,15 +62,19 @@ async function apiClient({ method = 'GET', path, body, params } = {}) {
       // Wrong credentials — surface the server message, no logout side-effects
       throw new ApiError(401, message || 'Invalid email or password.');
     }
-    // Session expiry — existing logout flow (unchanged)
-    if (!isLoggingOut) {
-      isLoggingOut = true;
-      localStorage.removeItem('token');
-      window.dispatchEvent(new CustomEvent('auth:logout'));
-      // Reset flag after navigation completes
-      setTimeout(() => { isLoggingOut = false; }, 2000);
+    // Only treat as session expiry if the user actually had a token
+    if (token) {
+      if (!isLoggingOut) {
+        isLoggingOut = true;
+        localStorage.removeItem('token');
+        window.dispatchEvent(new CustomEvent('auth:logout'));
+        // Reset flag after navigation completes
+        setTimeout(() => { isLoggingOut = false; }, 2000);
+      }
+      throw new ApiError(401, 'Session expired. Please log in again.');
     }
-    throw new ApiError(401, 'Session expired. Please log in again.');
+    // No token — backend requires auth for this endpoint, surface a clean message
+    throw new ApiError(401, message || 'Please log in to view this content.');
   }
 
   if (response.status === 403) {

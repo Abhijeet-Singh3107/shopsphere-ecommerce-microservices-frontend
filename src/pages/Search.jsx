@@ -29,10 +29,10 @@ export default function Search() {
     <div className="bg-gray-50 min-h-screen">
       <div className="bg-white border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-4 py-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-indigo-600">Search</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-sky-600">Search</p>
           <h1 className="mt-1 text-3xl font-bold text-gray-900">
             {keyword ? (
-              <>Results for <span className="text-indigo-600">"{keyword}"</span></>
+              <>Results for <span className="text-sky-600">"{keyword}"</span></>
             ) : (
               'Search Products'
             )}

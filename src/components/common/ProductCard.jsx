@@ -32,7 +32,7 @@ export default function ProductCard({ product }) {
       {/* Body */}
       <div className="flex flex-1 flex-col p-4">
         {categoryName && (
-          <span className="mb-1 text-xs font-semibold uppercase tracking-wider text-indigo-500">
+          <span className="mb-1 text-xs font-semibold uppercase tracking-wider text-sky-500">
             {categoryName}
           </span>
         )}
@@ -43,7 +43,7 @@ export default function ProductCard({ product }) {
           <span className="text-lg font-bold text-gray-900">{formatINR(price)}</span>
           <Link
             to={`/products/${id}`}
-            className="rounded-full bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-indigo-700"
+            className="rounded-full bg-sky-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-sky-700"
           >
             View
           </Link>
